@@ -60,8 +60,8 @@ function App() {
       <main className="App">
         <h1>IdeaBox</h1>
         <button onClick={toggleTheme}>Toggle Theme</button>
-        <Form addIdea={addIdea} />
-        <Ideas ideas={ideas} deleteIdea={deleteIdea} />
+        <Form />
+        <Ideas />
       </main>
     </ThemeContext.Provider>
   );
