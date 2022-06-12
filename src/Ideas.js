@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "./Card";
 import "./Ideas.css";
+import AppContext from "./AppContext";
 
-const Ideas = ({ ideas, deleteIdea }) => {
-  const ideaCards = ideas.map((idea) => {
+const Ideas = () => {
+  const [state, dispath] = useContext(AppContext);
+
+  const ideaCards = state.ideas.map((idea) => {
     return (
       <Card
         title={idea.title}
         description={idea.description}
         id={idea.id}
         key={idea.id}
-        deleteIdea={deleteIdea}
       />
     );
   });
